@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at 94.02% 88.03%, #54a4ff, transparent 100%), radial-gradient(circle at 25.99% 27.79%, #ff94fb, transparent 100%), radial-gradient(circle at 50% 50%, #000000, #000000 100%);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh; /* Esto asegura que el cuerpo tenga al menos la altura de la ventana del navegador */
+    display: flex;
+    flex-direction: column; /* Para que los elementos del cuerpo se ajusten correctamente */
+}
+
+/* Estilos para el encabezado */
+.logo-container {
+    background-color: purple;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    right: auto;
+}
+
+.logo-container div {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 50px;
+}
+
+/* Estilos para el eslogan */
+.slogan {
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 20px;
+}
+
+/* Estilos para la caja de búsqueda */
+.search-box {
+    padding: 20px;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 20px;
+}
+
+.search-box textarea {
+    width: 70%;
+    height: 100px;
+    resize: none;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+.nav__cont {
+    position: fixed; /* Fija el elemento en la ventana del navegador */
+    width: 50px; /* Establece el ancho del elemento */
+    top: 0; /* Lo coloca en la parte superior */
+    height: 100%; /* Establece la altura como el 100% de la altura de la ventana */
+    background-color: #202020; /* Establece el color de fondo */
+    overflow: hidden; /* Oculta el contenido que excede el ancho */
+    transition: width 0.3s ease; /* Aplica una transición suave al cambiar el ancho */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.4); /* Agrega una sombra */
+}
+
+.nav__cont:hover {
+    width: 160px; /* Amplía el ancho cuando se pasa el ratón */
+}
+
+@media screen and (min-width: 600px) {
+    .nav__cont {
+        width: 60px; /* Cambia el ancho en pantallas más grandes */
+    }
+}
+
+.nav {
+    list-style-type: none; /* Elimina los marcadores de lista */
+    color: white; /* Establece el color del texto */
+}
+
+.nav:first-child {
+    padding-top: 15px; /* Añade espacio superior al primer elemento de la lista */
+}
+
+.nav__items {
+    padding-bottom: 25PX; /* Añade espacio inferior */
+}
+
+.nav__items a {
+    position: relative; /* Establece la posición relativa para los enlaces */
+    display: block; /* Convierte los enlaces en bloques */
+    top: -35px; /* Mueve los enlaces hacia arriba */
+    padding-left: 10px; /* Añade relleno a la izquierda */
+    padding-right: 10px; /* Añade relleno a la derecha */
+    transition: all 0.3s ease; /* Aplica una transición suave a todos los cambios */
+    margin-left: 10px; /* Añade margen izquierdo */
+    margin-right: 10px; /* Añade margen derecho */
+    text-decoration: none; /* Elimina la decoración del enlace */
+    color: white; /* Establece el color del texto */
+    font-size: 20px; /* Establece el tamaño de la fuente */
+}
+
+.nav__items a:after {
+    content: ""; /* Agrega contenido después del enlace */
+    width: 100%; /* Establece el ancho al 100% */
+    height: 100%; /* Establece la altura al 100% */
+    position: absolute; /* Establece la posición absoluta */
+    top: 0; /* Lo coloca en la parte superior */
+    left: 0; /* Lo coloca en la parte izquierda */
+    border-radius: 2px; /* Establece el radio de borde */
+    background: radial-gradient(circle at 94.02% 88.03%, #54a4ff, transparent 100%); /* Establece el fondo como un degradado radial */
+    opacity: 0; /* Establece la opacidad a 0 por defecto */
+    transition: all 0.5s ease; /* Aplica una transición suave a todos los cambios */
+}
+
+.nav__items:hover a:after {
+    opacity: 1; /* Cambia la opacidad al pasar el ratón */
+}
+
+.nav__items svg {
+    width: 20px; /* Establece el ancho del icono svg */
+    height: 20px; /* Establece la altura del icono svg */
+    position: relative; /* Establece la posición relativa */
+    left: -25px; /* Mueve el icono hacia la izquierda */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+@media screen and (min-width: 600px) {
+    .nav__items svg {
+        width: 32px; /* Cambia el ancho del icono svg en pantallas más grandes */
+        height: 32px; /* Cambia la altura del icono svg en pantallas más grandes */
+    }
+}
+
+h1 {
+    margin-top: 20px;
+    margin-left: 80px;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 6px;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
